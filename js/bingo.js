@@ -3,6 +3,7 @@ var randomWeaponPool = [];
 var isRandomWeaponsPoolPopulated = false;
 var myBingoBoard;
 var myWeaponRandomizer;
+var gameVer = 8;
 
 var bingo = function(weaponMap) {
 
@@ -25,11 +26,16 @@ var bingo = function(weaponMap) {
         isBalancedCard = false;
     }
 
-    myBingoBoard = new BingoBoard(weaponMap, SEED, isBalancedCard);
+    let VER = parseInt(urlParams.get('v'));
+    if (VER !== undefined && VER !== null && !isNaN(VER) && VER > 0) {
+        gameVer = VER;
+    }
+
+    myBingoBoard = new BingoBoard(weaponMap, SEED, isBalancedCard, gameVer);
 
 	var results = $("#results");
-	results.append ("<p>Splatoon3Bingo.com <strong>v5</strong>&emsp;Mode: <strong>" + MODE[0].toUpperCase() + MODE.substring(1) + "</strong>&emsp;Seed: <strong>" +
-	SEED + "</strong></p><p>Download the <strong><a href=\"https://bingo.splat.pw\">OBS Plugin</a></strong>&emsp;Join us on <strong><a href=\"https://discord.gg/CErcb4gVqE\">Discord</a></strong></p></p>");
+	results.append ("<p>Splatoon3Bingo.com <strong>v7</strong>&emsp;Mode: <strong>" + MODE[0].toUpperCase() + MODE.substring(1) + "</strong>&emsp;Seed: <strong>" +
+	SEED + "</strong></p></p>");
 
 	$('.popout').click(function() {
 	    refreshBoard(false);
@@ -128,7 +134,7 @@ function initializeRandomizer() {
     if (document.getElementById("randomSet").checked === true) {
         seed = document.getElementById("mySeed").value;
     }
-    myWeaponRandomizer = new WeaponRandomizer(myBingoBoard, seed, isUsingAllWeapons, isAllowingRepeats, isIgnoreSeed);
+    myWeaponRandomizer = new WeaponRandomizer(myBingoBoard, seed, isUsingAllWeapons, isAllowingRepeats, isIgnoreSeed, gameVer);
 }
 
 function updateRandomWeapon(currentObj) {
@@ -167,11 +173,23 @@ function enableSeed() {
     document.getElementById("mySeed").disabled = false;
 }
 
+function disableVersion() {
+    document.getElementById("myVersion").disabled = true;
+}
+
+function enableVersion() {
+    document.getElementById("myVersion").disabled = false;
+}
+
 function reseedPage(isBalancedCard) {
     Math.seedrandom();
 	var urlParams = "?seed=" + Math.ceil(999999 * Math.random());
     if (!isBalancedCard) {
         urlParams = urlParams + "&mode=chaos";
+    }
+    const versionIgnore = document.getElementById('versionIgnore').checked;
+    if (!versionIgnore) {
+        urlParams += `&v=${parseInt(document.getElementById('myVersion').value)}`;
     }
 	window.location = urlParams;
 	return false;

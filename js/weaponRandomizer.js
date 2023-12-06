@@ -1,9 +1,10 @@
 class WeaponRandomizer {
-    constructor(bingoBoard, seed, isUsingAllWeapons, isAllowingRepeats, isIgnoreSeed) {
+    constructor(bingoBoard, seed, isUsingAllWeapons, isAllowingRepeats, isIgnoreSeed, version) {
         this.weaponMap = bingoBoard.weaponMap;
         this.board = bingoBoard.board;
         this.seed = seed;
         this.isIgnoreSeed = isIgnoreSeed;
+        this.version = version;
         this.isUsingAllWeapons = isUsingAllWeapons;
         this.isAllowingRepeats = isAllowingRepeats;
         this.pool = this.setupPool();
@@ -45,7 +46,7 @@ class WeaponRandomizer {
                 result.push(value[val]);
             }
         }
-        return result;
+        return result.filter(w => w.ver <= this.version);
     }
 
     setupPool() {

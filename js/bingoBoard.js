@@ -11,12 +11,13 @@ class BingoBoard {
     #t8 = [[0, 9, 13, 16, 22], [1, 7, 14, 18, 20], [2, 8, 11, 15, 24], [3, 5, 12, 19, 21], [4, 6, 10, 17, 23]];
     #allTemplates = [this.#t1, this.#t2, this.#t3, this.#t4, this.#t5, this.#t6, this.#t7, this.#t8];
 
-    constructor(weaponMap, seed, isBalancedCard) {
+    constructor(weaponMap, seed, isBalancedCard, version = 8) {
         Math.seedrandom(seed);
         this.seed = seed;
         this.weaponMap = weaponMap;
         this.isBalancedCard = isBalancedCard;
         this.template = this.#allTemplates[Math.floor(Math.random() * this.#allTemplates.length)];
+        this.version = version;
         this.board = this.setupBoard();
     }
 
@@ -42,6 +43,8 @@ class BingoBoard {
                 tempWeapons.push(value[val]);
             }
         }
+        // Filter to only weapons of the specified version
+        tempWeapons = tempWeapons.filter(w => w.ver <= this.version);
         for (let i=0; i<25; i++) {
             let index = Math.floor(Math.random() * tempWeapons.length);
             let chosenWeapon = tempWeapons[index];
@@ -55,7 +58,6 @@ class BingoBoard {
         let board = new Array(25);
         let tempWeaponsMap = new Map(JSON.parse(JSON.stringify([...this.weaponMap]))) //Deep copy the map
         let keys = Array.from(tempWeaponsMap.keys());
-        keys.push('Shooter'); //Put this in twice because there are enough shooters, we can afford 10 of them on a board
         let chosenKeys = [];
         for (let i=0; i<5; i++) {
             let index = Math.floor(Math.random() * keys.length);
@@ -65,7 +67,8 @@ class BingoBoard {
         }
         for (let j=0; j<5; j++) {
             let currentKey = chosenKeys[j];
-            let currentWeaponList = tempWeaponsMap.get(currentKey);
+            let currentWeaponList = tempWeaponsMap.get(currentKey).filter(w => w.ver <= this.version); // Get weapon type, and filter to only specified version
+            console.log(currentWeaponList);
             for (let k=0; k<5; k++) {
                 let index = Math.floor(Math.random() * currentWeaponList.length);
                 let chosenWeapon = currentWeaponList[index];
