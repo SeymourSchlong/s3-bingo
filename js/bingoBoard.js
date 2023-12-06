@@ -68,7 +68,6 @@ class BingoBoard {
         for (let j=0; j<5; j++) {
             let currentKey = chosenKeys[j];
             let currentWeaponList = tempWeaponsMap.get(currentKey).filter(w => w.ver <= this.version); // Get weapon type, and filter to only specified version
-            console.log(currentWeaponList);
             for (let k=0; k<5; k++) {
                 let index = Math.floor(Math.random() * currentWeaponList.length);
                 let chosenWeapon = currentWeaponList[index];
