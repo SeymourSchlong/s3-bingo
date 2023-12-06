@@ -10,6 +10,13 @@
   font-weight: 400;
   src: local('Merriweather'), url(http://themes.googleusercontent.com/static/fonts/merriweather/v4/RFda8w1V0eDZheqfcyQ4EHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
+@font-face {
+    font-family: "Splat-text";
+    src: url("../fonts/SplatoonText.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
 
 #bingo img {
     max-width:  100px;

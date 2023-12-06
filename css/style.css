@@ -1,5 +1,5 @@
 html, body {
-	background:#111;
+	background-color:#111;
 	color:#bec7d2;
 	font-family:Helvetica, Arial, sans-serif;
 	font-size:.88em;
@@ -14,7 +14,7 @@ html, body {
 header {
 	-moz-box-shadow:1px 1px 2px rgba(0,0,0,0.6);
 	-webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.6);
-	background:url(http://c15111086.r86.cf2.rackcdn.com/texture_bar2.jpg) top center;
+	background-image:url(http://c15111086.r86.cf2.rackcdn.com/texture_bar2.jpg) top center;
 	border-bottom:1px #424242 dotted;
 	box-shadow:1px 1px 2px rgba(0,0,0,0.6);
 	padding-top:8px;
@@ -23,7 +23,7 @@ header {
 footer {
 	-moz-box-shadow:1px 1px 2px rgba(0,0,0,0.6);
 	-webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.6);
-	background:url(http://c15111086.r86.cf2.rackcdn.com/texture_bar_footer2.jpg) top center;
+	background-image:url(http://c15111086.r86.cf2.rackcdn.com/texture_bar_footer2.jpg) top center;
 	border-top:1px #424242 dotted;
 	box-shadow:1px 1px 2px rgba(0,0,0,0.6);
 	clear:both;
@@ -144,7 +144,7 @@ th {
 #wrap {	min-height:100%; }
 
 #logo {
-	background:url('http://c15111086.r86.cf2.rackcdn.com/srl_350px.png') no-repeat;
+	background-image:url('http://c15111086.r86.cf2.rackcdn.com/srl_350px.png') no-repeat;
 	display:block;
 	height:50px;
 	margin-bottom:13px;
@@ -225,7 +225,7 @@ th {
 }
 
 #bingoPage #bingo .rowcol {
-	background:#000811;
+	background-color:#000811;
 	border:1px #0a245a solid;
 	color:#3c70df;
 	font-size:75%;
@@ -233,12 +233,12 @@ th {
 }
 
 #bingoPage #bingo .rowcol:hover {
-	background:#1448b3;
+	background-color:#1448b3;
 	color:#fff;
 }
 
 #bingoPage #bingo tr:first-child td,#bingoPage #bingo tr:last-child td {
-	background:#000811;
+	background-color:#000811;
 	border:1px #0a245a solid;
 	color:#3c70df;
 	font-size:75%;
@@ -247,14 +247,14 @@ th {
 }
 
 #bingoPage #bingo tr:first-child td:hover,#bingoPage #bingo tr:last-child td:hover {
-	background:#1448b3;
+	background-color:#1448b3;
 	color:#fff;
 }
 
 #bingoPage #bingo tr td {
 	-moz-box-shadow:inset 0 0 50px rgba(0,0,0,0.6);
 	-webkit-box-shadow:inset 0 0 50px rgba(0,0,0,0.6);
-	background:#000;
+	background-color:#000;
 	border:1px #424242 solid;
 	box-shadow:inset 0 0 50px rgba(0,0,0,0.6);
 	cursor:pointer;
@@ -263,10 +263,17 @@ th {
 	width:110px;
     max-width:110px;
     max-height:110px;
+
+	--shadow: 0 0 1.5px black;
+
+	font-family: "Splat-text";
+    font-weight: normal;
+    text-shadow: var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow), var(--shadow);
+    font-size: 14px;
 }
 
 #bingoPage #bingo tr td:first-child {
-	background:#000811;
+	background-color:#000811;
 	border:1px #0a245a solid;
 	color:#3c70df;
 	font-size:75%;
@@ -275,29 +282,29 @@ th {
 }
 
 #bingoPage #bingo tr td:first-child:hover {
-	background:#1448b3;
+	background-color:#1448b3;
 	color:#fff;
 }
 
 #bingoPage #bingo tr td:hover,#bingoPage #bingo tr td.hover {
-	background:#001a36;
+	background-color:#001a36;
 	color:#fff;
 }
 
 #bingoPage #bingo tr td.greensquare {
-	background:#051;
+	background-color:#051;
 }
 
 #bingoPage #bingo tr td.greensquare:hover,#bingoPage #bingo tr td.greensquare.hover {
-	background:#072;
+	background-color:#072;
 }
 
 #bingoPage #bingo tr td.redsquare {
-	background:#501;
+	background-color:#501;
 }
 
 #bingoPage #bingo tr td.redsquare:hover,#bingoPage #bingo tr td.redsquare.hover {
-	background:#702;
+	background-color:#702;
 }
 
 #bingoPage #about_bingo {

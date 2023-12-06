@@ -72,7 +72,7 @@ var bingo = function(weaponMap) {
 
 	//populate the actual table on the page
 	for (i=0; i<25; i++) {
-	  $('#slot'+(i+1)).append("<image width=70px height=70px src=" + myBingoBoard.board[i].image + ">");
+	  $('#slot'+(i+1)).append("<img draggable=\"false\" width=70px height=70px src=" + myBingoBoard.board[i].image + ">");
 	  $('#slot'+(i+1)).append(myBingoBoard.board[i].name);
 	}
 
@@ -84,10 +84,10 @@ function refreshBoard(showNames) {
       document.getElementById("slot" + (i+1)).innerHTML = "";
 
       if (showNames) {
-        $('#slot'+(i+1)).append("<image width=70px height=70px src=" + myBingoBoard.board[i].image + ">");
+        $('#slot'+(i+1)).append("<img draggable=\"false\" width=70px height=70px src=" + myBingoBoard.board[i].image + ">");
         $('#slot'+(i+1)).append(myBingoBoard.board[i].name);
       } else {
-        $('#slot'+(i+1)).append("<image src=" + myBingoBoard.board[i].image + ">");
+        $('#slot'+(i+1)).append("<img draggable=\"false\" src=" + myBingoBoard.board[i].image + ">");
       }
     }
 }
