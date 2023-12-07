@@ -38,7 +38,6 @@ var bingo = function(weaponMap) {
 	SEED + "</strong></p></p>");
 
 	$('.popout').click(function() {
-	    //refreshBoard(false);
 		var line = $(this).attr('id');
 		var name = $(this).html();
 		var items = [];
@@ -79,25 +78,14 @@ var bingo = function(weaponMap) {
 	return true;
 }; // setup
 
-function refreshBoard(showNames) {
+function toggleNames() {
     // add a "no name" class
     const table = document.getElementById('bingo');
-    if (showNames) {
+    if ([...table.classList].includes('hidename')) {
         table.classList.remove('hidename');
     } else {
         table.classList.add('hidename');
     }
-    /*
-    for (i=0; i<25; i++) {
-        document.getElementById("slot" + (i+1)).innerHTML = "";
-
-        if (showNames) {
-            $('#slot'+(i+1)).append("<img draggable=\"false\" width=70px height=70px src=" + myBingoBoard.board[i].image + ">");
-            $('#slot'+(i+1)).append(myBingoBoard.board[i].name);
-        } else {
-            $('#slot'+(i+1)).append("<img draggable=\"false\" src=" + myBingoBoard.board[i].image + ">");
-        }
-    }*/
 }
 
 function disableSettingsFields() {
