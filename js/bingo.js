@@ -29,12 +29,14 @@ var bingo = function(weaponMap) {
     let VER = parseInt(urlParams.get('v'));
     if (VER !== undefined && VER !== null && !isNaN(VER) && VER > 0) {
         gameVer = VER;
+        document.querySelector("#versionSet").click();
+        document.querySelector("#myVersion").value = gameVer;
     }
 
     myBingoBoard = new BingoBoard(weaponMap, SEED, isBalancedCard, gameVer);
 
 	var results = $("#results");
-	results.append ("<p>Splatoon3Bingo.com <strong>v7</strong>&emsp;Mode: <strong>" + MODE[0].toUpperCase() + MODE.substring(1) + "</strong>&emsp;Seed: <strong>" +
+	results.append ("<p>Splatoon3Bingo.com <strong>v8</strong>&emsp;Mode: <strong>" + MODE[0].toUpperCase() + MODE.substring(1) + "</strong>&emsp;Seed: <strong>" +
 	SEED + "</strong></p></p>");
 
 	$('.popout').click(function() {

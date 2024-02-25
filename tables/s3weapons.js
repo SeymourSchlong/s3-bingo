@@ -12,6 +12,7 @@ var frontLineShooterList = [
     {image: "./weapons/071.png", ver: 3, types: "Frontline",       name: "Neo Sploosh-o-matic"},
     {image: "./weapons/078.png", ver: 3, types: "Frontline",       name: "Neo Splash-o-matic"},
     {image: "./weapons/079.png", ver: 3, types: "Frontline",       name: "N-ZAP '89"},
+    {image: "./weapons/117.png", ver: 7, types: "Frontline",       name: ".52 Gal Deco"},
 ];
 
 var backLineShooterList = [
@@ -48,6 +49,7 @@ var splatlingList = [
     {image: "./weapons/090.png", ver: 4, types: "Splatling",       name: "Heavy Splatling Deco"},
     {image: "./weapons/098.png", ver: 5, types: "Splatling",       name: "Ballpoint Splatling Nouveau"},
     {image: "./weapons/099.png", ver: 5, types: "Splatling",       name: "Heavy Edit Splatling"},
+    {image: "./weapons/120.png", ver: 7, types: "Splatling",       name: "Nautilus 79"},
 ];
 
 var chargerList = [
@@ -63,6 +65,9 @@ var chargerList = [
     {image: "./weapons/074.png", ver: 3, types: "Charger",         name: "Z+F Splatterscope"},
     {image: "./weapons/093.png", ver: 5, types: "Charger",         name: "Custom Goo Tuber"},
     {image: "./weapons/104.png", ver: 6, types: "Charger",         name: "Snipewriter 5B"},
+    {image: "./weapons/110.png", ver: 7, types: "Charger",         name: "Custom E-liter 4K"},
+    {image: "./weapons/111.png", ver: 7, types: "Charger",         name: "Custom E-liter 4K Scope"},
+    {image: "./weapons/112.png", ver: 7, types: "Charger",         name: "New Squiffer"},
 ];
 
 var blasterList = [
@@ -91,6 +96,8 @@ var slosherList = [
     {image: "./weapons/080.png", ver: 3, types: "Slosher",         name: "Tri-Slosher Nouveau"},
     {image: "./weapons/096.png", ver: 5, types: "Slosher",         name: "Bloblobber Deco"},
     {image: "./weapons/097.png", ver: 5, types: "Slosher",         name: "Dread Wringer"},
+    {image: "./weapons/119.png", ver: 7, types: "Slosher",         name: "Custom Explosher"},
+    {image: "./weapons/118.png", ver: 7, types: "Slosher",         name: "Dread Wringer D"},
 ];
 
 var dualiesList = [
@@ -103,6 +110,8 @@ var dualiesList = [
     {image: "./weapons/085.png", ver: 4, types: "Dualies",         name: "Light Tetra Dualies"},
     {image: "./weapons/089.png", ver: 4, types: "Dualies",         name: "Custom Dualie Squelchers"},
     {image: "./weapons/105.png", ver: 6, types: "Dualies",         name: "Enperry Splat Dualies"},
+    {image: "./weapons/113.png", ver: 7, types: "Dualies",         name: "Glooga Dualies Deco"},
+    {image: "./weapons/114.png", ver: 7, types: "Dualies",         name: "Douser Dualies FF"},
 ];
 
 var brushRollerList = [
@@ -121,6 +130,7 @@ var brushRollerList = [
     {image: "./weapons/092.png", ver: 5, types: "Brush",           name: "Octobrush Nouveau"},
     {image: "./weapons/094.png", ver: 5, types: "Roller",          name: "Gold Dynamo Roller"},
     {image: "./weapons/103.png", ver: 6, types: "Brush",           name: "Painbrush Nouveau"},
+    {image: "./weapons/115.png", ver: 7, types: "Roller",          name: "Foil Flingza Roller"},
 ];
 
 var miscList = [
@@ -138,6 +148,7 @@ var miscList = [
     {image: "./weapons/109.png", ver: 6, types: "Stringer",        name: "REEF-LUX 450 Deco"},
     {image: "./weapons/107.png", ver: 6, types: "Brella",          name: "Sorella Undercover Brella"},
     {image: "./weapons/106.png", ver: 6, types: "Splatana",        name: "Neo Splatana Stamper"},
+    {image: "./weapons/086.png", ver: 7, types: "Brella",          name: "Recycled Brella 23 Mk I"},
 ]
 
 weaponMap.set('Frontline', frontLineShooterList);
