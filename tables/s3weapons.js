@@ -148,7 +148,7 @@ var miscList = [
     {image: "./weapons/109.png", ver: 6, types: "Stringer",        name: "REEF-LUX 450 Deco"},
     {image: "./weapons/107.png", ver: 6, types: "Brella",          name: "Sorella Undercover Brella"},
     {image: "./weapons/106.png", ver: 6, types: "Splatana",        name: "Neo Splatana Stamper"},
-    {image: "./weapons/086.png", ver: 7, types: "Brella",          name: "Recycled Brella 23 Mk I"},
+    {image: "./weapons/116.png", ver: 7, types: "Brella",          name: "Recycled Brella 23 Mk I"},
 ]
 
 weaponMap.set('Frontline', frontLineShooterList);
