@@ -32,8 +32,12 @@ var bingo = function(weaponMap) {
         document.querySelector("#versionSet").click();
         document.querySelector("#myVersion").value = gameVer;
     }
+    let MAIN = urlParams.get('m') != undefined;
+    if (MAIN) {
+        document.querySelector("#versionMain").click();
+    }
 
-    myBingoBoard = new BingoBoard(weaponMap, SEED, isBalancedCard, gameVer);
+    myBingoBoard = new BingoBoard(weaponMap, SEED, isBalancedCard, gameVer, MAIN);
 
 	var results = $("#results");
 	results.append ("<p>Splatoon3Bingo.com <strong>v8</strong>&emsp;Mode: <strong>" + MODE[0].toUpperCase() + MODE.substring(1) + "</strong>&emsp;Seed: <strong>" +
@@ -185,9 +189,12 @@ function reseedPage(isBalancedCard) {
     if (!isBalancedCard) {
         urlParams = urlParams + "&mode=chaos";
     }
-    const versionIgnore = document.getElementById('versionIgnore').checked;
-    if (!versionIgnore) {
+    const customVersion = document.getElementById('versionSet').checked;
+    const mainOnly = document.getElementById('versionMain').checked;
+    if (customVersion) {
         urlParams += `&v=${parseInt(document.getElementById('myVersion').value)}`;
+    } else if (mainOnly) {
+        urlParams += `&m=1`;
     }
 	window.location = urlParams;
 	return false;
