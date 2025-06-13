@@ -3,7 +3,7 @@ var randomWeaponPool = [];
 var isRandomWeaponsPoolPopulated = false;
 var myBingoBoard;
 var myWeaponRandomizer;
-var gameVer = 8;
+var gameVer = 10;
 
 var bingo = function(weaponMap) {
 
