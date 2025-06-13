@@ -40,7 +40,7 @@ var bingo = function(weaponMap) {
     myBingoBoard = new BingoBoard(weaponMap, SEED, isBalancedCard, gameVer, MAIN);
 
 	var results = $("#results");
-	results.append ("<p>Splatoon3Bingo.com <strong>v8</strong>&emsp;Mode: <strong>" + MODE[0].toUpperCase() + MODE.substring(1) + "</strong>&emsp;Seed: <strong>" +
+	results.append ("<p>Splatoon3Bingo.com <strong>v10</strong>&emsp;Mode: <strong>" + MODE[0].toUpperCase() + MODE.substring(1) + "</strong>&emsp;Seed: <strong>" +
 	SEED + "</strong></p></p>");
 
 	$('.popout').click(function() {
